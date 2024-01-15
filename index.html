@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUDGETER</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <span>BUDGETER</span>
+      </div>
+      
+      <!-- Section One -->
+      <div id="sectionone" class="section">
+        <span>DETAILS</span>
+        <div class="container">
+            <span class="label">Currency:</span>
+            <select id="currency-select" onchange="updatePlaceholders(this)">
+              <option value="current" selected>Choose currency</option>
+              <option value="INR">INR(₹)</option>
+              <option value="USD">USD($)</option>
+              <option value="GBP">GBP(£)</option>
+              <option value="AED">AED</option>
+          </select>
+            <span class="label">Month:</span>
+            <select id="months">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+            <span class="label">E-mail(Optional):</span>
+            <input type="text" id="email">
+          </div>
+        </div>
+        
+        <div id="line"></div>
+        <!-- Section Two -->
+        <div id="sectiontwo" class="section">
+          <span>INCOME DETAILS</span>
+          <div class="container">
+            <span class="label">Monthly salary/wages:</span>
+            <input type="number" id="id1">
+            <span class="label">Additional sources of income:</span>
+            <input type="number" id="id2" min="14" max="99">
+          </div>
+        </div>
+        <div id="line"></div>
+
+        <!--Section Three-->
+        <div id="sectionthree" class="section">
+            <span>EXPENSE DETAILS</span>
+            <div class="container">
+              <span class="label">Housing Expenses:</span>
+              <input type="number" id="ed1">
+              <span class="label">Transportation Expenses:</span>
+              <input type="number" id="ed2" min="14" max="99">
+              <span class="label">Food & Groceries:</span>
+              <input type="number" id="ed3" min="14" max="99">
+              <span class="label">Insurance Premiums:</span>
+              <input type="number" id="ed4" min="14" max="99">
+              <span class="label">Debt Payments:</span>
+              <input type="number" id="ed5" min="14" max="99">
+              <span class="label">Entertainment & Recreation:</span>
+              <input type="number" id="ed6" min="14" max="99">
+              <span class="label">Medical Expenses:</span>
+              <input type="number" id="ed7" min="14" max="99">
+              <span class="label">Education Expenses:</span>
+              <input type="number" id="ed8" min="14" max="99">
+              <span class="label">Childcare Expenses:</span>
+              <input type="number" id="ed9" min="14" max="99">
+              <span class="label">Miscellaneous Expenses:</span>
+              <input type="number" id="ed10" min="14" max="99">
+            </div>
+        </div>
+        <div id="line"></div>
+
+        <!--Section Four-->
+        <div id="sectionfour" class="section">
+          <span>Savings Goals</span>
+          <div class="container">
+            <span class="label">Emergency Fund:</span>
+            <input type="text" id="sg1">
+            <span class="label">Retirement Savings:</span>
+            <input type="number" id="sg2" min="14" max="99">
+            <span class="label">Down Payment for Home:</span>
+            <input type="number" id="sg3" min="14" max="99">
+            <span class="label">Education Fund:</span>
+            <input type="number" id="sg4" min="14" max="99">
+            <span class="label">Specific Savings:</span>
+            <input type="number" id="sg5" min="14" max="99">
+          </div>
+        </div>
+        <div id="line"></div>
+
+        <!--Section Five-->
+        <div id="sectionfive" class="section">
+          <span>Debt Details</span>
+          <div class="container">
+            <span class="label">Outstanding Balance:</span>
+            <input type="number" id="dd1">
+          </div>
+        </div>
+        <div id="line"></div>
+
+        <!--Section Six-->
+        <div id="sectionsix" class="section">
+          <span>Financial Goals</span>
+          <div class="container">
+            <span class="label">Goals:</span>
+            <input type="text" id="fg1">
+          </div>
+        </div>
+        
+        <div id="line"></div>
+        <!-- Section Seven -->
+<div id="sectionseven" class="section">
+  <span>TOTALS</span>
+  <div class="container">
+    <span class="label">Total Income:</span>
+    <span id="totalIncome"></span>
+    <span class="label">Total Expense:</span>
+    <span id="totalExpense"></span>
+    <span class="label">Total Savings:</span>
+    <span id="totalSavings"></span>
+    <span class="label">Total Debt:</span>
+    <span id="totalDebt"></span>
+    <span class="label">Net Worth:</span>
+    <span id="netWorth"></span>
+    <button id="calculateButton" class="calculate-button">Calculate Totals</button>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
